@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WebLaunchPal — Local Web Design for Vancouver Businesses</title>
+<meta name="description" content="Affordable, professional websites for small businesses in Greater Vancouver. Built fast, built right, built for you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">WebLaunchPal</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#contact">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">🇨🇦 Serving Greater Vancouver</div>
+  <h1>Your business deserves<br /><span class="accent">a real website.</span></h1>
+  <p class="hero-sub">We build clean, fast, professional websites for small businesses in the Lower Mainland — at a price that actually makes sense.</p>
+  <div class="hero-btns">
+    <a href="#pricing" class="btn-primary">See Pricing</a>
+    <a href="#contact" class="btn-secondary">Get a Free Demo</a>
+  </div>
+  <div class="hero-proof">
+    <div class="proof-item"><span class="proof-num">48hr</span><span class="proof-label">Demo turnaround</span></div>
+    <div class="proof-divider"></div>
+    <div class="proof-item"><span class="proof-num">Local</span><span class="proof-label">Vancouver-based</span></div>
+    <div class="proof-divider"></div>
+    <div class="proof-item"><span class="proof-num">100%</span><span class="proof-label">Mobile-friendly</span></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Restaurants</span><span class="dot">·</span>
+    <span>Salons</span><span class="dot">·</span>
+    <span>Contractors</span><span class="dot">·</span>
+    <span>HVAC</span><span class="dot">·</span>
+    <span>Clinics</span><span class="dot">·</span>
+    <span>Coffee Shops</span><span class="dot">·</span>
+    <span>Plumbers</span><span class="dot">·</span>
+    <span>Photographers</span><span class="dot">·</span>
+    <span>Barbershops</span><span class="dot">·</span>
+    <span>Gyms</span><span class="dot">·</span>
+    <span>Bakeries</span><span class="dot">·</span>
+    <span>Real Estate</span><span class="dot">·</span>
+    <span>Restaurants</span><span class="dot">·</span>
+    <span>Salons</span><span class="dot">·</span>
+    <span>Contractors</span><span class="dot">·</span>
+    <span>HVAC</span><span class="dot">·</span>
+    <span>Clinics</span><span class="dot">·</span>
+    <span>Coffee Shops</span><span class="dot">·</span>
+    <span>Plumbers</span><span class="dot">·</span>
+    <span>Photographers</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- WHAT YOU GET -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">What's included</div>
+    <h2>Everything a small business actually needs</h2>
+    <p class="section-sub">No bloat. No hidden extras. Just a website that works hard for your business.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Over 60% of local searches happen on phones. Your site looks perfect on every screen.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Local SEO Built In</h3>
+        <p>We set up your site so Google can actually find you when customers search nearby.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Fast Load Speed</h3>
+        <p>Slow sites lose customers. Every site we build is optimized to load in under 3 seconds.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📬</div>
+        <h3>Contact Form → Your Inbox</h3>
+        <p>Customer messages go straight to your email. No extra apps, no setup needed on your end.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📍</div>
+        <h3>Google Maps Embed</h3>
+        <p>Customers can find your location instantly and get directions without leaving your site.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔒</div>
+        <h3>SSL & Security</h3>
+        <p>Every site comes with an SSL certificate (the padlock in the browser) so customers trust you.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📅</div>
+        <h3>Booking Integration</h3>
+        <p>For salons, clinics, trades and more — let customers book directly through your site.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Google Analytics</h3>
+        <p>See how many people visit, where they come from, and what they click on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2>Clear pricing. No surprises.</h2>
+    <p class="section-sub">Pick the package that fits your business. Pricing is always flexible — just ask.</p>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">$300<span>–$500</span></div>
+        <div class="plan-pages">1 Page</div>
+        <p class="plan-desc">Perfect for businesses that just need a clean online presence to show they're real and reachable.</p>
+        <ul class="plan-features">
+          <li>✓ Single scrollable page</li>
+          <li>✓ Services overview</li>
+          <li>✓ Contact info + hours</li>
+          <li>✓ Google Maps embed</li>
+          <li>✓ Mobile responsive</li>
+          <li>✓ Basic SEO setup</li>
+        </ul>
+        <div class="plan-best">Best for: coffee shops, food stalls, tutors, nail techs</div>
+        <a href="#contact" class="plan-btn">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="plan-name">Standard</div>
+        <div class="plan-price">$600<span>–$900</span></div>
+        <div class="plan-pages">3 Pages</div>
+        <p class="plan-desc">A full online presence with room to show off your work, your services, and your story.</p>
+        <ul class="plan-features">
+          <li>✓ Home + Services + Contact</li>
+          <li>✓ Photo gallery</li>
+          <li>✓ Testimonials section</li>
+          <li>✓ Google Business Profile setup</li>
+          <li>✓ SEO on all pages</li>
+          <li>✓ Social media links</li>
+        </ul>
+        <div class="plan-best">Best for: salons, restaurants, photographers, landscapers</div>
+        <a href="#contact" class="plan-btn">Get Started</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="plan-name">Professional</div>
+        <div class="plan-price">$1,000<span>–$1,500</span></div>
+        <div class="plan-pages">5 Pages</div>
+        <p class="plan-desc">A complete website that builds trust and converts visitors into calls, bookings, and leads.</p>
+        <ul class="plan-features">
+          <li>✓ Home, About, Services, Gallery, Contact</li>
+          <li>✓ FAQ section</li>
+          <li>✓ Google Analytics</li>
+          <li>✓ Speed optimization</li>
+          <li>✓ Full SEO on every page</li>
+          <li>✓ Everything in Standard</li>
+        </ul>
+        <div class="plan-best">Best for: contractors, clinics, fitness coaches, agents</div>
+        <a href="#contact" class="plan-btn">Get Started</a>
+      </div>
+
+      <div class="pricing-card premium">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">$1,500<span>–$2,500+</span></div>
+        <div class="plan-pages">5+ Pages + Integrations</div>
+        <p class="plan-desc">A full-featured business website with booking, payments, and everything needed to run online.</p>
+        <ul class="plan-features">
+          <li>✓ Online booking system</li>
+          <li>✓ Payment integration</li>
+          <li>✓ Email list + automation</li>
+          <li>✓ Live chat widget</li>
+          <li>✓ Call tracking</li>
+          <li>✓ Everything in Professional</li>
+        </ul>
+        <div class="plan-best">Best for: spas, HVAC, plumbers, gyms, med clinics</div>
+        <a href="#contact" class="plan-btn">Get Started</a>
+      </div>
+
+    </div>
+
+    <!-- CARE PLANS -->
+    <div class="care-section">
+      <div class="care-header">
+        <h3>Monthly Care Plans</h3>
+        <p>Don't want to deal with updates, hosting, or maintenance? We've got you covered every month.</p>
+      </div>
+      <div class="care-grid">
+        <div class="care-card">
+          <div class="care-name">Basic</div>
+          <div class="care-price">$30<span>/month</span></div>
+          <ul>
+            <li>✓ Hosting & domain management</li>
+            <li>✓ Monthly backups</li>
+            <li>✓ Security monitoring</li>
+          </ul>
+        </div>
+        <div class="care-card care-featured">
+          <div class="care-name">Standard</div>
+          <div class="care-price">$60<span>/month</span></div>
+          <ul>
+            <li>✓ Everything in Basic</li>
+            <li>✓ 1 hour of edits per month</li>
+            <li>✓ Monthly SEO check</li>
+          </ul>
+        </div>
+        <div class="care-card">
+          <div class="care-name">Growth</div>
+          <div class="care-price">$100<span>/month</span></div>
+          <ul>
+            <li>✓ Everything in Standard</li>
+            <li>✓ Google Business management</li>
+            <li>✓ Monthly analytics report</li>
+            <li>✓ 2 hours of edits per month</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process" id="about">
+  <div class="container">
+    <div class="section-label">How it works</div>
+    <h2>Simple from start to finish</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>We build a free demo</h3>
+          <p>We research your business and build a real, clickable preview — no cost, no commitment. You see it before anything is decided.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>You tell us what to change</h3>
+          <p>Like the design? Want different colours, wording, or sections? Just say the word. We revise until it's exactly right.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>We go live</h3>
+          <p>Once you're happy, we connect your domain and launch. Your site is live, indexed by Google, and ready for customers.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>We stick around</h3>
+          <p>On a care plan? We handle updates, backups, and changes every month. You run your business — we handle the website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <div class="container about-inner">
+    <div class="about-text">
+      <div class="section-label">About</div>
+      <h2>Local. Personal. No agency markup.</h2>
+      <p>WebLaunchPal is run by Hanson, a web developer based in the Greater Vancouver area. No agency middlemen, no offshore teams — just one person who actually cares about making your business look good online.</p>
+      <p>You work directly with me from start to finish. That means faster turnaround, honest pricing, and someone you can actually message when you need something changed.</p>
+      <a href="#contact" class="btn-primary">Let's Talk</a>
+    </div>
+    <div class="about-card">
+      <div class="about-card-inner">
+        <div class="about-initial">H</div>
+        <div class="about-name">Hanson</div>
+        <div class="about-role">Founder & Developer</div>
+        <div class="about-location">📍 Greater Vancouver, BC</div>
+        <div class="about-tags">
+          <span>Web Design</span>
+          <span>Local SEO</span>
+          <span>Small Business</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">Get in touch</div>
+    <h2>Ready to get started?</h2>
+    <p class="section-sub">Tell us about your business and we'll build a free demo within 48 hours. No commitment needed.</p>
+    <form class="contact-form" action="https://formspree.io/f/mgoqdpvz" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label for="business">Business Name</label>
+          <input type="text" id="business" name="business" placeholder="Smith's Bakery" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="604-555-0100" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="package">Which package interests you?</label>
+        <select id="package" name="package">
+          <option value="">Not sure yet</option>
+          <option value="starter">Starter — 1 Page ($300–$500)</option>
+          <option value="standard">Standard — 3 Pages ($600–$900)</option>
+          <option value="professional">Professional — 5 Pages ($1,000–$1,500)</option>
+          <option value="premium">Premium — Complex ($1,500–$2,500+)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell us about your business</label>
+        <textarea id="message" name="message" rows="4" placeholder="What do you do, where are you located, and what do you want your website to achieve?"></textarea>
+      </div>
+      <button type="submit" class="btn-primary submit-btn">Send Message →</button>
+      <p class="form-note">We typically respond within 24 hours. Pricing is always negotiable.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">WebLaunchPal</div>
+    <div class="footer-text">Serving Greater Vancouver · Burnaby · Surrey · Richmond · Coquitlam · North Vancouver · Langley · Abbotsford</div>
+    <div class="footer-copy">© 2026 WebLaunchPal. Built with care in BC, Canada.</div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('active');
+  });
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+</script>
+</body>
+</html>
