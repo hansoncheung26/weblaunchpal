@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://www.weblaunchpal.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0P5FJFPK3"></script>
@@ -50,8 +50,31 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
+    <div class="hero-top">
+      <!-- Dusk sky over a Toronto skyline, drawn in CSS/SVG (no image download) -->
+      <div class="sky" aria-hidden="true">
+        <div class="sky-glow"></div>
+        <svg class="skyline" viewBox="0 0 1600 220" preserveAspectRatio="xMidYMax slice">
+          <path class="far" d="M0 220V196h40v-10h30v16h50v-22h36v12h60v-18h40v24h70v-30h44v14h80v-20h52v26h90v-16h60v-28h50v20h70v-12h56v18h80v-24h40v30h60v-14h66v20h90v-26h50v16h70v-10h50v22h44v-18h60v14h44v28H1600V220z"/>
+          <path class="near" d="M0 220V208h70v-6h60v10h90v-14h50v8h80v-18h40v12h70v-22h36v-30h44v24h30v-46h40v-20h34v58h26v-70h42v-14h30v86h28v-54h46v36h24v-64h38v-26h34v92h30v-40h40v20h50v-50h36v66h44v-24h60v16h40v-10h70v18h80v-8h60v12h40v30h60v16h80v8H1600V220z"/>
+          <g class="near">
+            <path d="M1132 220l5-146h8l5 146z"/>
+            <rect x="1127" y="62" width="28" height="13" rx="6"/>
+            <rect x="1131" y="76" width="20" height="4" rx="2"/>
+            <rect x="1138.5" y="24" width="5" height="40"/>
+            <rect x="1136" y="40" width="10" height="6" rx="3"/>
+            <rect x="1140.3" y="0" width="1.4" height="26"/>
+          </g>
+          <g class="lights">
+            <rect x="590" y="140" width="2" height="2"/><rect x="684" y="112" width="2" height="2"/><rect x="694" y="150" width="2" height="2"/>
+            <rect x="856" y="100" width="2" height="2"/><rect x="890" y="76" width="2" height="2"/><rect x="900" y="120" width="2" height="2"/>
+            <rect x="1048" y="96" width="2" height="2"/><rect x="1140" y="68" width="2" height="2"/><rect x="1190" y="140" width="2" height="2"/>
+          </g>
+        </svg>
+        <div class="fog fog-a"></div>
+        <div class="fog fog-b"></div>
+      </div>
+      <div class="wrap hero-copy">
         <span class="clock"><span class="clock-dot"></span>Free demo in 48 hours</span>
         <h1>See your new website before you pay for it.</h1>
         <p class="hero-lede">I build fast, modern websites for small businesses in the Greater Toronto Area. You get a working demo of your site first, free, with no commitment.</p>
@@ -65,7 +88,9 @@
           <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#14A866" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pricing is always open to discussion</li>
         </ul>
       </div>
+    </div>
 
+    <div class="wrap hero-compare">
       <div class="compare">
         <div class="browser">
           <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">northlinedetailing.ca</span></div>
@@ -163,27 +188,27 @@
       </div>
       <div class="features">
         <div class="feature">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <div class="viz viz-phone" aria-hidden="true"><div class="phone"><i></i><i></i><i></i><i></i></div></div>
           <div><h3>Designed for phones first</h3><p>Most local searches happen on a phone, so your site is built for small screens and scales up from there.</p></div>
         </div>
         <div class="feature">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <div class="viz viz-speed" aria-hidden="true"><div class="gauge"><b></b></div><span>&lt; 3s</span></div>
           <div><h3>Loads in under 3 seconds</h3><p>Compressed images, clean code and fast hosting, so visitors don't leave before the page appears.</p></div>
         </div>
         <div class="feature">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></div>
+          <div class="viz viz-seo" aria-hidden="true"><div class="results"><div class="result r1"><i></i><i></i></div><div class="result r2"><i></i><i></i></div><div class="result r3 you"><i></i><i></i></div></div></div>
           <div><h3>On-page SEO done properly</h3><p>Page titles, descriptions, image alt text, structured data and a sitemap, set up so Google understands what you offer.</p></div>
         </div>
         <div class="feature">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></div>
+          <div class="viz viz-inbox" aria-hidden="true"><div class="inbox"><div class="msg new"><i></i><i></i></div><div class="msg"><i></i><i></i></div><div class="msg"><i></i><i></i></div></div></div>
           <div><h3>Enquiries straight to your inbox</h3><p>Contact form messages land in your email. No new app to learn.</p></div>
         </div>
         <div class="feature">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div class="viz viz-map" aria-hidden="true"><span class="ring"></span><span class="pin"><svg width="26" height="32" viewBox="0 0 24 30"><path d="M12 29s10-9.3 10-17A10 10 0 002 12c0 7.7 10 17 10 17z" fill="currentColor"/><circle cx="12" cy="12" r="3.6" fill="#13110F"/></svg></span></div>
           <div><h3>Map and directions</h3><p>Customers can see where you are and get directions in one tap.</p></div>
         </div>
         <div class="feature">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
+          <div class="viz viz-lock" aria-hidden="true"><div class="lock"><span class="shackle"></span><span class="lock-body"></span></div></div>
           <div><h3>Secure by default</h3><p>An SSL certificate on every site, so browsers show the padlock and customers trust the page.</p></div>
         </div>
       </div>
@@ -222,12 +247,12 @@
                 <path d="M300 70v160"/>
               </g>
               <g fill="#14A866"><circle cx="70" cy="230" r="5"/><circle cx="250" cy="190" r="5"/><circle cx="300" cy="70" r="5"/><circle cx="300" cy="230" r="5"/></g>
-              <g fill="#A3B3C8" font-family="Instrument Sans, sans-serif" font-size="9">
+              <g fill="#A3B3C8" font-family="Geist, sans-serif" font-size="9">
                 <text x="56" y="62">KITCHEN</text><text x="216" y="62">ENSUITE</text><text x="56" y="182">LAUNDRY</text><text x="276" y="182">MECH. ROOM</text>
                 <text x="74" y="224">3/4" supply line</text><text x="306" y="150">ABS stack</text><text x="214" y="184">shutoff</text>
               </g>
               <g stroke="#A3B3C8" stroke-width="1"><path d="M40 278h320M40 273v10M360 273v10"/></g>
-              <text x="186" y="292" fill="#A3B3C8" font-family="Instrument Sans, sans-serif" font-size="9">14'-6"</text>
+              <text x="186" y="292" fill="#A3B3C8" font-family="Geist, sans-serif" font-size="9">14'-6"</text>
             </svg>
           </div>
           <p>Sample project drawing. Click or tap anywhere on it to zoom into that spot.</p>
@@ -436,7 +461,7 @@
       setPos(v); range.value = Math.round(v);
       if (t < keys[keys.length - 1][0]) requestAnimationFrame(frame);
     }
-    setTimeout(function () { requestAnimationFrame(frame); }, 600);
+    setTimeout(function () { requestAnimationFrame(frame); }, 1700);
   }
 
   // Zoom demo
@@ -474,7 +499,7 @@
         btn.textContent = 'Request sent';
       })
       .catch(function () {
-        status.hidden = false; status.style.color = '#B42318';
+        status.hidden = false; status.style.color = 'var(--error)';
         status.textContent = 'The form didn’t send. Email hanson@weblaunchpal.com instead and I’ll reply the same way.';
         btn.disabled = false; btn.textContent = 'Request my free demo';
       });
@@ -492,18 +517,48 @@
       return '<span class="w" aria-hidden="true"><span style="--i:' + i + '">' + w + '</span></span>';
     }).join(' ');
 
-    // Sections slide in as they scroll into view, siblings slightly staggered
+    // "Hour 48" on the timeline counts up while the steps tick through
+    var timeline = document.querySelector('.timeline');
+    var hourKey = timeline.querySelector('.is-key .tl-hour');
+    function countHours() {
+      var start = null;
+      function step(ts) {
+        if (start === null) start = ts;
+        var k = Math.min(1, (ts - start - 500) / 1100);
+        hourKey.textContent = 'Hour ' + Math.round(48 * (k < 0 ? 0 : 1 - Math.pow(1 - k, 3)));
+        if (k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    // Sections fade in from a soft blur as they scroll into view, siblings slightly staggered
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+          if (en.target === timeline) countHours();
+        });
       }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
       document.querySelectorAll('.section-head, .tl-step, .feature, .extras-list li, .zoom-demo, .tier, .care h3, .care-card, .care-note, .about-photo, .about-copy, .faq details, .contact-copy, .form').forEach(function (el) {
         el.style.setProperty('--d', Math.min(Array.prototype.indexOf.call(el.parentNode.children, el), 5) * 80 + 'ms');
         el.classList.add('reveal');
         io.observe(el);
       });
-      io.observe(document.querySelector('.timeline'));
+      io.observe(timeline);
     }
+
+    // Hero browser rises out of the horizon and straightens as the page scrolls
+    var rise = document.querySelector('.hero-compare'), riseQueued = false;
+    function setRise() {
+      riseQueued = false;
+      var vh = window.innerHeight, t = rise.getBoundingClientRect().top;
+      var p = Math.min(1, Math.max(0, (vh - t) / (vh * 0.65)));
+      rise.style.transform = 'perspective(1400px) rotateX(' + ((1 - p) * 16).toFixed(2) + 'deg) scale(' + (0.94 + p * 0.06).toFixed(3) + ')';
+    }
+    window.addEventListener('scroll', function () { if (!riseQueued) { riseQueued = true; requestAnimationFrame(setRise); } }, { passive: true });
+    setRise();
 
     if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
       // Hero browser tilts toward the cursor; it lies flat while the slider is being dragged
