@@ -114,6 +114,14 @@
     </div>
   </section>
 
+  <!-- CITY MARQUEE (decorative; the same cities are listed in the footer) -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <ul><li>Toronto</li><li>Markham</li><li>Richmond Hill</li><li>Vaughan</li><li>Mississauga</li><li>Brampton</li><li>Oakville</li><li>Burlington</li></ul>
+      <ul><li>Toronto</li><li>Markham</li><li>Richmond Hill</li><li>Vaughan</li><li>Mississauga</li><li>Brampton</li><li>Oakville</li><li>Burlington</li></ul>
+    </div>
+  </div>
+
   <!-- HOW IT WORKS -->
   <section class="band" id="how">
     <div class="wrap">
@@ -384,6 +392,7 @@
     <span>Serving Toronto, Markham, Richmond Hill, Vaughan, Mississauga, Brampton, Oakville and Burlington</span>
     <span>&copy; <span id="year">2026</span> WebLaunchPal</span>
   </div>
+  <div class="footer-mark" aria-hidden="true">WebLaunch<span>Pal</span></div>
 </footer>
 
 <script>
@@ -470,6 +479,54 @@
         btn.disabled = false; btn.textContent = 'Request my free demo';
       });
   });
+
+  // Motion layer: headline reveal, scroll reveals, hero tilt and magnetic buttons.
+  // Skipped entirely when the visitor prefers reduced motion; the page then shows everything in place.
+  if (!reduce) {
+    document.documentElement.classList.add('motion');
+
+    // Headline rises in word by word (screen readers get the plain sentence)
+    var h1 = document.querySelector('.hero h1');
+    h1.setAttribute('aria-label', h1.textContent.trim());
+    h1.innerHTML = h1.textContent.trim().split(/\s+/).map(function (w, i) {
+      return '<span class="w" aria-hidden="true"><span style="--i:' + i + '">' + w + '</span></span>';
+    }).join(' ');
+
+    // Sections slide in as they scroll into view, siblings slightly staggered
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      document.querySelectorAll('.section-head, .tl-step, .feature, .extras-list li, .zoom-demo, .tier, .care h3, .care-card, .care-note, .about-photo, .about-copy, .faq details, .contact-copy, .form').forEach(function (el) {
+        el.style.setProperty('--d', Math.min(Array.prototype.indexOf.call(el.parentNode.children, el), 5) * 80 + 'ms');
+        el.classList.add('reveal');
+        io.observe(el);
+      });
+      io.observe(document.querySelector('.timeline'));
+    }
+
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      // Hero browser tilts toward the cursor; it lies flat while the slider is being dragged
+      var compare = document.querySelector('.compare');
+      var browser = compare.querySelector('.browser');
+      compare.addEventListener('pointermove', function (e) {
+        if (e.buttons) { browser.style.transform = ''; return; }
+        var r = compare.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        browser.style.transform = 'perspective(1200px) rotateY(' + (x * 7).toFixed(2) + 'deg) rotateX(' + (-y * 5).toFixed(2) + 'deg)';
+      });
+      compare.addEventListener('pointerleave', function () { browser.style.transform = ''; });
+
+      // Main call-to-action buttons lean toward the cursor
+      document.querySelectorAll('.hero-actions .btn, .nav-links .btn').forEach(function (b) {
+        b.addEventListener('pointermove', function (e) {
+          var r = b.getBoundingClientRect();
+          b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * 0.25).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * 0.35).toFixed(1) + 'px)';
+        });
+        b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+      });
+    }
+  }
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
