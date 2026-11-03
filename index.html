@@ -204,33 +204,6 @@
           <li><b>Interactive project maps</b><span>Pin every job you've done across the city so customers see you've worked near them.</span></li>
           <li><b>Online booking and payments</b><span>Customers book a time and pay a deposit without picking up the phone.</span></li>
         </ul>
-        <div class="zoom-demo">
-          <div class="zoom-frame" id="zoomFrame" role="button" tabindex="0" aria-label="Sample project drawing. Click to zoom in.">
-            <svg viewBox="0 0 400 300" aria-hidden="true">
-              <defs>
-                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#24314A" stroke-width="1"/></pattern>
-              </defs>
-              <rect width="400" height="300" fill="#111826"/>
-              <rect width="400" height="300" fill="url(#grid)"/>
-              <g fill="none" stroke="#F3EEE6" stroke-width="3">
-                <rect x="40" y="40" width="320" height="220"/>
-                <path d="M200 40v120M40 160h220M260 160v100"/>
-              </g>
-              <g fill="none" stroke="#FF9A4D" stroke-width="2.5" stroke-linecap="round">
-                <path d="M70 230h140v-40M210 190h40"/>
-                <path d="M300 70v160"/>
-              </g>
-              <g fill="#FFD08A"><circle cx="70" cy="230" r="5"/><circle cx="250" cy="190" r="5"/><circle cx="300" cy="70" r="5"/><circle cx="300" cy="230" r="5"/></g>
-              <g fill="#A8B3C5" font-family="Archivo, sans-serif" font-size="9">
-                <text x="56" y="62">KITCHEN</text><text x="216" y="62">ENSUITE</text><text x="56" y="182">LAUNDRY</text><text x="276" y="182">MECH. ROOM</text>
-                <text x="74" y="224">3/4" supply line</text><text x="306" y="150">ABS stack</text><text x="214" y="184">shutoff</text>
-              </g>
-              <g stroke="#A8B3C5" stroke-width="1"><path d="M40 278h320M40 273v10M360 273v10"/></g>
-              <text x="186" y="292" fill="#A8B3C5" font-family="Archivo, sans-serif" font-size="9">14'-6"</text>
-            </svg>
-          </div>
-          <p>Sample project drawing. Click or tap anywhere on it to zoom into that spot.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -539,16 +512,6 @@
     var seen = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { seen.disconnect(); setTimeout(sweep, 300); } }, { threshold: 0.6 });
     seen.observe(ba);
   }
-
-  // Zoom demo
-  var zf = document.getElementById('zoomFrame');
-  function toggleZoom(x, y) {
-    if (!zf.classList.contains('zoomed')) { zf.style.setProperty('--zx', x + '%'); zf.style.setProperty('--zy', y + '%'); }
-    zf.classList.toggle('zoomed');
-    zf.setAttribute('aria-label', zf.classList.contains('zoomed') ? 'Sample project drawing, zoomed in. Click to zoom out.' : 'Sample project drawing. Click to zoom in.');
-  }
-  zf.addEventListener('click', function (e) { var r = zf.getBoundingClientRect(); toggleZoom(((e.clientX - r.left) / r.width) * 100, ((e.clientY - r.top) / r.height) * 100); });
-  zf.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleZoom(50, 50); } });
 
   // Package buttons pre-select the form
   document.querySelectorAll('[data-package]').forEach(function (b) {
