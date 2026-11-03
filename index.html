@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>WebLaunchPal — Web Design for Toronto-Area Businesses</title>
 <meta name="description" content="Websites for small businesses in the Greater Toronto Area. Free demo in 48 hours, and you see your site before you pay anything." />
+<meta name="theme-color" content="#141B28" />
 <meta property="og:title" content="WebLaunchPal — Web Design for Toronto-Area Businesses" />
 <meta property="og:description" content="Free demo in 48 hours. You see your new website before you pay anything." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.weblaunchpal.com" />
+<meta property="og:image" content="https://www.weblaunchpal.com/assets/og.jpg" />
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Nanum+Pen+Script&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..850&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/hero-sky.jpg" media="(min-width: 721px)" />
 <link rel="stylesheet" href="style.css" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0P5FJFPK3"></script>
@@ -23,10 +27,12 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="env" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="logo">WebLaunch<span>Pal</span></a>
+    <a href="#top" class="logo"><img src="assets/logo-mark.svg" alt="" width="34" height="34" />WebLaunch<span>Pal</span></a>
     <ul class="nav-links">
       <li><a href="#how">How it works</a></li>
       <li><a href="#extras">Interactive extras</a></li>
@@ -41,50 +47,87 @@
     <a href="#extras">Interactive extras</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
-    <a href="#about">About</a>
     <a href="#contact" class="btn btn-go">Get a free demo</a>
   </nav>
 </header>
 
-<main id="top">
+<main id="main" tabindex="-1">
 
-  <!-- HERO: the work order -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
+  <!-- HERO: a descent from the dusk sky into the city lights, driven by scroll -->
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="stage" id="stage">
+      <div class="sky" aria-hidden="true"><div class="sky-img" id="skyImg"></div></div>
+      <div class="cloud cloud-l" aria-hidden="true"></div>
+      <div class="cloud cloud-r" aria-hidden="true"></div>
+      <div class="mist" aria-hidden="true"></div>
+      <div class="scrim" aria-hidden="true"></div>
+
+      <div class="band band-1" data-a="0" data-b="0.3">
+        <p class="clock"><span class="clock-dot"></span>Free demo in 48 hours</p>
         <h1>See your new website before you pay for it.</h1>
-        <p class="hero-lede">I build fast, modern websites for small businesses in the Greater Toronto Area. You get a working demo of your site first, free, with no commitment.</p>
-        <div class="hero-actions">
+        <p class="lede">I build fast, modern websites for small businesses in the Greater Toronto Area. You get a working demo of your site first, free, with no commitment.</p>
+      </div>
+
+      <div class="band band-2" data-a="0.34" data-b="0.64">
+        <p class="big">Been burned by a web designer before?</p>
+        <p class="sub">Here the website comes first. The bill comes after you approve it.</p>
+      </div>
+
+      <div class="band band-3" data-a="0.7" data-b="1">
+        <p class="big">Your business, lights on.</p>
+        <ul class="promise">
+          <li>No payment until you approve the design</li>
+          <li>You work with me directly, start to finish</li>
+          <li>Pricing is always open to discussion</li>
+        </ul>
+        <div class="actions">
           <a href="#contact" class="btn btn-go">Get my free demo</a>
-          <a href="#pricing" class="text-link">See pricing</a>
+          <a href="#pricing" class="btn btn-ghost">See pricing</a>
         </div>
       </div>
 
-      <div class="slip-wrap">
-        <div class="slip" role="img" aria-label="Work order: free demo in 48 hours. No payment until you approve the design. You work with me directly, start to finish. Pricing is always open to discussion. $0 due today.">
-          <div class="slip-head"><b>WebLaunchPal</b><span>No. 0048</span></div>
-          <div class="slip-row"><span class="slip-label">Customer</span><span class="hand write w1">Your business</span></div>
-          <div class="slip-row"><span class="slip-label">Job</span><span class="hand write w2">Free demo in 48 hours</span></div>
-          <div class="slip-row slip-checks"><span class="slip-label">Included</span>
-            <ul class="promise">
-              <li><span class="box c1"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 14l5 5L23 4"/></svg></span>No payment until you approve the design</li>
-              <li><span class="box c2"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 14l5 5L23 4"/></svg></span>You work with me directly, start to finish</li>
-              <li><span class="box c3"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5 14l5 5L23 4"/></svg></span>Pricing is always open to discussion</li>
-            </ul>
-          </div>
-          <div class="slip-row slip-total"><span class="slip-label">Due today</span><span class="hand write w3">$0</span></div>
-          <div class="stamp" aria-hidden="true">NO PAYMENT<small>until you approve</small></div>
-        </div>
-      </div>
+      <div class="cue" aria-hidden="true"><span></span>Scroll</div>
     </div>
   </section>
 
-  <!-- BEFORE / AFTER -->
-  <section class="compare-band" aria-label="Before and after example">
+  <!-- HOW IT WORKS -->
+  <section class="band-section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From first message to live site</h2>
+        <p>The demo comes first. You only decide once you've clicked around a real version of your own website.</p>
+      </div>
+      <ol class="timeline" id="timeline">
+        <li class="tl-step">
+          <span class="tl-hour">Hour 0</span>
+          <h3>You tell me about your business</h3>
+          <p>Fill in the form below with your business name, what you do and any photos or logo you have.</p>
+        </li>
+        <li class="tl-step is-key">
+          <span class="tl-hour">Hour 48</span>
+          <h3>Your demo link arrives</h3>
+          <p>A real, clickable website built for your business. It costs nothing to look at.</p>
+        </li>
+        <li class="tl-step">
+          <span class="tl-hour">Revisions</span>
+          <h3>We adjust it together</h3>
+          <p>Different colours, wording or sections. I revise until it feels right for your business.</p>
+        </li>
+        <li class="tl-step">
+          <span class="tl-hour">Launch</span>
+          <h3>Your site goes live</h3>
+          <p>I connect your domain, set up Google indexing, and walk you through everything.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER: the one interactive moment -->
+  <section class="band-section compare-section" aria-label="Before and after example">
     <div class="wrap compare">
       <div class="browser">
         <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">northlinedetailing.ca</span></div>
-        <div class="stage" id="stage">
+        <div class="stage-ba" id="baStage">
           <div class="layer layer-before" aria-hidden="true">
             <div class="old">
               <div class="old-banner">Welcome to Northline Auto Detailing!!!</div>
@@ -128,58 +171,26 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS: the job sheet -->
-  <section class="band" id="how">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>From first message to live site</h2>
-        <p>The demo comes first. You only decide once you've clicked around a real version of your own website.</p>
-      </div>
-      <ol class="timeline">
-        <li class="tl-step">
-          <span class="tl-hour">Hour 0</span>
-          <h3>You tell me about your business</h3>
-          <p>Fill in the form below with your business name, what you do and any photos or logo you have.</p>
-        </li>
-        <li class="tl-step is-key">
-          <span class="tl-hour">Hour 48</span>
-          <h3>Your demo link arrives</h3>
-          <p>A real, clickable website built for your business. It costs nothing to look at.</p>
-        </li>
-        <li class="tl-step">
-          <span class="tl-hour">Revisions</span>
-          <h3>We adjust it together</h3>
-          <p>Different colours, wording or sections. I revise until it feels right for your business.</p>
-        </li>
-        <li class="tl-step">
-          <span class="tl-hour">Launch</span>
-          <h3>Your site goes live</h3>
-          <p>I connect your domain, set up Google indexing, and walk you through everything.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- INCLUDED: the inspection checklist -->
-  <section class="band" id="included">
+  <!-- INCLUDED -->
+  <section class="band-section" id="included">
     <div class="wrap">
       <div class="section-head">
         <h2>Included in every build</h2>
         <p>The basics that decide whether a visitor calls you or goes back to Google.</p>
       </div>
       <ul class="features">
-        <li class="feature"><span class="box" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M5 14l5 5L23 4"/></svg></span><div><h3>Designed for phones first</h3><p>Most local searches happen on a phone, so your site is built for small screens and scales up from there.</p></div></li>
-        <li class="feature"><span class="box" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M5 14l5 5L23 4"/></svg></span><div><h3>Loads in under 3 seconds</h3><p>Compressed images, clean code and fast hosting, so visitors don't leave before the page appears.</p></div></li>
-        <li class="feature"><span class="box" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M5 14l5 5L23 4"/></svg></span><div><h3>On-page SEO done properly</h3><p>Page titles, descriptions, image alt text, structured data and a sitemap, set up so Google understands what you offer.</p></div></li>
-        <li class="feature"><span class="box" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M5 14l5 5L23 4"/></svg></span><div><h3>Enquiries straight to your inbox</h3><p>Contact form messages land in your email. No new app to learn.</p></div></li>
-        <li class="feature"><span class="box" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M5 14l5 5L23 4"/></svg></span><div><h3>Map and directions</h3><p>Customers can see where you are and get directions in one tap.</p></div></li>
-        <li class="feature"><span class="box" aria-hidden="true"><svg viewBox="0 0 26 26"><path d="M5 14l5 5L23 4"/></svg></span><div><h3>Secure by default</h3><p>An SSL certificate on every site, so browsers show the padlock and customers trust the page.</p></div></li>
+        <li class="feature"><span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3>Designed for phones first</h3><p>Most local searches happen on a phone, so your site is built for small screens and scales up from there.</p></li>
+        <li class="feature"><span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Loads in under 3 seconds</h3><p>Compressed images, clean code and fast hosting, so visitors don't leave before the page appears.</p></li>
+        <li class="feature"><span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span><h3>On-page SEO done properly</h3><p>Page titles, descriptions, image alt text, structured data and a sitemap, set up so Google understands what you offer.</p></li>
+        <li class="feature"><span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></span><h3>Enquiries straight to your inbox</h3><p>Contact form messages land in your email. No new app to learn.</p></li>
+        <li class="feature"><span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Map and directions</h3><p>Customers can see where you are and get directions in one tap.</p></li>
+        <li class="feature"><span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span><h3>Secure by default</h3><p>An SSL certificate on every site, so browsers show the padlock and customers trust the page.</p></li>
       </ul>
     </div>
   </section>
 
   <!-- INTERACTIVE EXTRAS -->
-  <section class="band extras" id="extras">
+  <section class="band-section extras" id="extras">
     <div class="wrap">
       <div class="section-head">
         <h2>Want people to stop scrolling?</h2>
@@ -197,25 +208,25 @@
           <div class="zoom-frame" id="zoomFrame" role="button" tabindex="0" aria-label="Sample project drawing. Click to zoom in.">
             <svg viewBox="0 0 400 300" aria-hidden="true">
               <defs>
-                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1e3350" stroke-width="1"/></pattern>
+                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#24314A" stroke-width="1"/></pattern>
               </defs>
-              <rect width="400" height="300" fill="#0c1624"/>
+              <rect width="400" height="300" fill="#111826"/>
               <rect width="400" height="300" fill="url(#grid)"/>
-              <g fill="none" stroke="#EAF0F7" stroke-width="3">
+              <g fill="none" stroke="#F3EEE6" stroke-width="3">
                 <rect x="40" y="40" width="320" height="220"/>
                 <path d="M200 40v120M40 160h220M260 160v100"/>
               </g>
-              <g fill="none" stroke="#F9E27D" stroke-width="2.5" stroke-linecap="round">
+              <g fill="none" stroke="#FF9A4D" stroke-width="2.5" stroke-linecap="round">
                 <path d="M70 230h140v-40M210 190h40"/>
                 <path d="M300 70v160"/>
               </g>
-              <g fill="#F26B5B"><circle cx="70" cy="230" r="5"/><circle cx="250" cy="190" r="5"/><circle cx="300" cy="70" r="5"/><circle cx="300" cy="230" r="5"/></g>
-              <g fill="#A3B3C8" font-family="Archivo, sans-serif" font-size="9">
+              <g fill="#FFD08A"><circle cx="70" cy="230" r="5"/><circle cx="250" cy="190" r="5"/><circle cx="300" cy="70" r="5"/><circle cx="300" cy="230" r="5"/></g>
+              <g fill="#A8B3C5" font-family="Archivo, sans-serif" font-size="9">
                 <text x="56" y="62">KITCHEN</text><text x="216" y="62">ENSUITE</text><text x="56" y="182">LAUNDRY</text><text x="276" y="182">MECH. ROOM</text>
                 <text x="74" y="224">3/4" supply line</text><text x="306" y="150">ABS stack</text><text x="214" y="184">shutoff</text>
               </g>
-              <g stroke="#A3B3C8" stroke-width="1"><path d="M40 278h320M40 273v10M360 273v10"/></g>
-              <text x="186" y="292" fill="#A3B3C8" font-family="Archivo, sans-serif" font-size="9">14'-6"</text>
+              <g stroke="#A8B3C5" stroke-width="1"><path d="M40 278h320M40 273v10M360 273v10"/></g>
+              <text x="186" y="292" fill="#A8B3C5" font-family="Archivo, sans-serif" font-size="9">14'-6"</text>
             </svg>
           </div>
           <p>Sample project drawing. Click or tap anywhere on it to zoom into that spot.</p>
@@ -224,8 +235,8 @@
     </div>
   </section>
 
-  <!-- PRICING: quote sheets -->
-  <section class="band" id="pricing">
+  <!-- PRICING -->
+  <section class="band-section" id="pricing">
     <div class="wrap">
       <div class="section-head">
         <h2>Clear prices, open to discussion</h2>
@@ -242,7 +253,7 @@
             <li>On-page SEO setup</li>
             <li>2 rounds of revisions</li>
           </ul>
-          <a href="#contact" class="btn btn-outline" data-package="essential">Start with Essential</a>
+          <a href="#contact" class="btn btn-ghost" data-package="essential">Start with Essential</a>
         </article>
         <article class="tier featured">
           <div class="tier-name">Growth <span class="tier-badge">Most chosen</span></div>
@@ -268,7 +279,7 @@
             <li>Priority support</li>
             <li>Launch strategy call</li>
           </ul>
-          <a href="#contact" class="btn btn-outline" data-package="complete">Start with Complete</a>
+          <a href="#contact" class="btn btn-ghost" data-package="complete">Start with Complete</a>
         </article>
       </div>
 
@@ -290,9 +301,9 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="band" id="about">
+  <section class="band-section about" id="about">
     <div class="wrap about-grid">
-      <div class="about-photo"><img src="hanson.jpg" alt="Hanson, founder of WebLaunchPal" width="320" height="400" /></div>
+      <div class="about-visual" aria-hidden="true"><img src="assets/logo-mark.svg" alt="" width="120" height="120" /></div>
       <div class="about-copy">
         <h2>You work with one person: me.</h2>
         <p>I'm Hanson, and WebLaunchPal is my studio. There's no agency layer and no offshore team. I design, build and launch every site myself, and you can message me directly whenever you need something changed.</p>
@@ -303,7 +314,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="band" id="faq">
+  <section class="band-section" id="faq">
     <div class="wrap faq-grid">
       <div class="section-head"><h2>Questions people ask first</h2></div>
       <div class="faq">
@@ -335,8 +346,9 @@
     </div>
   </section>
 
-  <!-- CONTACT: the request slip -->
-  <section class="band contact" id="contact">
+  <!-- CONTACT -->
+  <section class="band-section contact" id="contact">
+    <div class="contact-bg" aria-hidden="true"></div>
     <div class="wrap contact-grid">
       <div class="contact-copy">
         <h2>Get your free demo</h2>
@@ -376,7 +388,7 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <a href="#top" class="logo">WebLaunch<span>Pal</span></a>
+    <a href="#top" class="logo"><img src="assets/logo-mark.svg" alt="" width="28" height="28" />WebLaunch<span>Pal</span></a>
     <span>Serving Toronto, Markham, Richmond Hill, Vaughan, Mississauga, Brampton, Oakville and Burlington</span>
     <span>&copy; <span id="year">2026</span> WebLaunchPal</span>
   </div>
@@ -384,15 +396,15 @@
 
 <script>
 (function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var html = document.documentElement;
 
-  // Nav rule on scroll
+  // Nav glass on scroll
   var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function () { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+  function navState() { nav.classList.toggle('scrolled', window.scrollY > 20); }
+  window.addEventListener('scroll', navState, { passive: true }); navState();
 
   // Mobile menu
-  var menuBtn = document.getElementById('menuBtn');
-  var menu = document.getElementById('mobileMenu');
+  var menuBtn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
   menuBtn.addEventListener('click', function () {
     var open = menu.classList.toggle('open');
     menuBtn.setAttribute('aria-expanded', open);
@@ -402,16 +414,113 @@
     a.addEventListener('click', function () { menu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); menuBtn.textContent = 'Menu'; });
   });
 
-  // Before/after slider
-  var stage = document.getElementById('stage');
-  var range = document.getElementById('compareRange');
-  var stop = false;
-  function setPos(v) { stage.style.setProperty('--pos', v + '%'); }
+  // ---- The descent hero ------------------------------------------------------------
+  // Scroll progress through the pinned hero (0..1) drives a slow zoom down into the city,
+  // clouds parting, a mist beat, and three caption bands. Phones, short landscape phones and
+  // reduced-motion visitors get the composed static hero instead (same gates in CSS).
+  var GATES = [
+    '(max-width: 720px)',
+    '(orientation: portrait) and (max-width: 1024px)',
+    '(orientation: portrait) and (pointer: coarse)',
+    '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+    '(prefers-reduced-motion: reduce)'
+  ];
+  var MQLS = GATES.map(function (q) { return window.matchMedia(q); });
+  var hero = document.querySelector('.hero');
+  var sky = document.getElementById('skyImg');
+  var bands = [].slice.call(document.querySelectorAll('.band')).map(function (el) {
+    return { el: el, a: +el.dataset.a, b: +el.dataset.b, op: -1, k: -1 };
+  });
+  var target = 0, shown = 0, rafId = null, lastTick = 0, scrubOn = false, heroOnScreen = true, lastSky = '', lastMist = -1, lastCloud = -1;
+  var smoothstep = function (p, e0, e1) { var t = Math.min(1, Math.max(0, (p - e0) / (e1 - e0))); return t * t * (3 - 2 * t); };
+  var clamp = function (v, lo, hi) { return Math.min(hi, Math.max(lo, v)); };
+  var loadK = 0, loadStart = performance.now();
+
+  function heroProgress() {
+    var r = hero.getBoundingClientRect(), range = hero.offsetHeight - window.innerHeight;
+    return range > 0 ? clamp(-r.top / range, 0, 1) : 0;
+  }
+
+  function render(p, now) {
+    // The camera: zoom toward the gap in the clouds and sink slightly, eased so it lands softly
+    var e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+    var s = (1 + e * 1.35).toFixed(4), y = (e * 9).toFixed(3);
+    var t = 'translate3d(0,' + y + '%,0) scale(' + s + ')';
+    if (t !== lastSky) { sky.style.transform = t; lastSky = t; }
+    // Clouds part outward, and a soft mist washes across mid-descent (the "through the cloud" beat)
+    var c = Math.round(smoothstep(p, .08, .7) * 1000) / 1000;
+    if (c !== lastCloud) { hero.style.setProperty('--part', c); lastCloud = c; }
+    var m = Math.round((smoothstep(p, .38, .5) * (1 - smoothstep(p, .52, .66))) * 1000) / 1000;
+    if (m !== lastMist) { hero.style.setProperty('--mist', m); lastMist = m; }
+    // Caption bands: long readable plateaus with short eased ramps; band 1 opens settled
+    bands.forEach(function (bd, i) {
+      var f = Math.min(0.045, (bd.b - bd.a) / 4);
+      var inE = i === 0 ? 1 : smoothstep(p, bd.a, bd.a + f);
+      var outE = i === bands.length - 1 ? 0 : smoothstep(p, bd.b - f, bd.b);
+      var op = Math.round(inE * (1 - outE) * 1000) / 1000;
+      var k = clamp((p - bd.a) / Math.max(f * 1.6, 0.001), 0, 1);
+      if (i === 0) k = Math.max(k, loadK);
+      k = Math.round(k * 125) / 125;
+      if (op !== bd.op) { bd.el.style.opacity = op; bd.el.style.visibility = op < 0.01 ? 'hidden' : 'visible'; bd.op = op; }
+      if (k !== bd.k) { bd.el.style.setProperty('--k', k); bd.k = k; }
+    });
+  }
+
+  function tick(now) {
+    var dt = Math.min(100, now - (lastTick || now)); lastTick = now;
+    var kk = 0.14;
+    shown += (target - shown) * (1 - Math.pow(1 - kk, dt / 16.667));
+    var settledLoad = loadK >= 1;
+    loadK = Math.min(1, (now - loadStart) / 1100);
+    if (Math.abs(target - shown) < 0.0004 && settledLoad) { shown = target; rafId = null; lastTick = 0; }
+    else rafId = requestAnimationFrame(tick);
+    render(shown, now);
+  }
+  function wake() { if (rafId === null && heroOnScreen && scrubOn) rafId = requestAnimationFrame(tick); }
+  function onScroll() { target = heroProgress(); wake(); }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { heroOnScreen = en[0].isIntersecting; if (heroOnScreen) wake(); }).observe(hero);
+  }
+
+  function enableScrub() {
+    if (scrubOn) return; scrubOn = true;
+    html.classList.remove('static-hero');
+    window.addEventListener('scroll', onScroll, { passive: true });
+    bands.forEach(function (b) { b.op = -1; b.k = -1; }); lastSky = ''; lastMist = -1; lastCloud = -1;
+    loadStart = performance.now(); loadK = 0;
+    target = shown = heroProgress(); wake();
+  }
+  function disableScrub() {
+    if (!scrubOn && html.classList.contains('static-hero')) return;
+    scrubOn = false;
+    html.classList.add('static-hero');
+    window.removeEventListener('scroll', onScroll);
+    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+    sky.style.transform = ''; lastSky = '';
+    bands.forEach(function (b) { b.el.style.opacity = ''; b.el.style.visibility = ''; b.el.style.removeProperty('--k'); b.op = -1; b.k = -1; });
+    hero.style.removeProperty('--part'); hero.style.removeProperty('--mist');
+  }
+  function applyHeroMode() { if (MQLS.some(function (m) { return m.matches; })) disableScrub(); else enableScrub(); }
+  MQLS.forEach(function (m) { (m.addEventListener ? m.addEventListener('change', applyHeroMode) : m.addListener(applyHeroMode)); });
+  applyHeroMode();
+
+  // ---- Below the hero: quiet entrances, the timeline line, the slider ----------------
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if ('IntersectionObserver' in window) {
+    html.classList.add('io');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+    document.querySelectorAll('.section-head, .timeline, .features, .tiers, .compare, .extras-grid, .about-grid, .faq, .contact-grid').forEach(function (el) { io.observe(el); });
+  }
+
+  // Before/after slider: drag, plus one sweep the first time it comes into view
+  var ba = document.getElementById('baStage'), range = document.getElementById('compareRange'), stop = false;
+  function setPos(v) { ba.style.setProperty('--pos', v + '%'); }
   range.addEventListener('input', function () { stop = true; setPos(range.value); });
-  // One sweep the first time the slider comes into view: show "before", wipe to "after", settle in the middle
   function sweep() {
-    var keys = [[0, 50], [500, 92], [1400, 92], [2400, 12], [3100, 12], [3800, 50]];
-    var t0 = null;
+    var keys = [[0, 50], [500, 90], [1300, 90], [2300, 12], [2900, 12], [3600, 50]], t0 = null;
     function ease(x) { return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; }
     function frame(ts) {
       if (stop) return;
@@ -426,11 +535,9 @@
     }
     requestAnimationFrame(frame);
   }
-  if (!reduce && 'IntersectionObserver' in window) {
-    var seen = new IntersectionObserver(function (entries) {
-      if (entries[0].isIntersecting) { seen.disconnect(); setTimeout(sweep, 300); }
-    }, { threshold: 0.6 });
-    seen.observe(stage);
+  if (!reduce.matches && 'IntersectionObserver' in window) {
+    var seen = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { seen.disconnect(); setTimeout(sweep, 300); } }, { threshold: 0.6 });
+    seen.observe(ba);
   }
 
   // Zoom demo
@@ -440,10 +547,7 @@
     zf.classList.toggle('zoomed');
     zf.setAttribute('aria-label', zf.classList.contains('zoomed') ? 'Sample project drawing, zoomed in. Click to zoom out.' : 'Sample project drawing. Click to zoom in.');
   }
-  zf.addEventListener('click', function (e) {
-    var r = zf.getBoundingClientRect();
-    toggleZoom(((e.clientX - r.left) / r.width) * 100, ((e.clientY - r.top) / r.height) * 100);
-  });
+  zf.addEventListener('click', function (e) { var r = zf.getBoundingClientRect(); toggleZoom(((e.clientX - r.left) / r.width) * 100, ((e.clientY - r.top) / r.height) * 100); });
   zf.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleZoom(50, 50); } });
 
   // Package buttons pre-select the form
@@ -452,8 +556,7 @@
   });
 
   // Submit via Formspree without leaving the page
-  var form = document.getElementById('demoForm');
-  var status = document.getElementById('formStatus');
+  var form = document.getElementById('demoForm'), status = document.getElementById('formStatus');
   form.addEventListener('submit', function (e) {
     if (!window.fetch) return;
     e.preventDefault();
@@ -463,16 +566,19 @@
       .then(function (r) {
         if (!r.ok) throw new Error();
         form.reset();
-        status.hidden = false; status.style.color = 'var(--pen)';
+        status.hidden = false; status.style.color = 'var(--ok)';
         status.textContent = 'Request sent. I’ll be in touch within one business day.';
         btn.textContent = 'Request sent';
       })
       .catch(function () {
-        status.hidden = false; status.style.color = 'var(--stamp)';
+        status.hidden = false; status.style.color = 'var(--error)';
         status.textContent = 'The form didn’t send. Email hanson@weblaunchpal.com instead and I’ll reply the same way.';
         btn.disabled = false; btn.textContent = 'Request my free demo';
       });
   });
+
+  // Pause looping background motion on hidden tabs
+  document.addEventListener('visibilitychange', function () { document.body.classList.toggle('paused', document.hidden); });
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

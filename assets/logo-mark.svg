@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WebLaunchPal">
+  <defs>
+    <linearGradient id="wlp-g" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF9A4D"/>
+      <stop offset="1" stop-color="#FFD08A"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#wlp-g)"/>
+  <path d="M18 34 32 20l14 14" fill="none" stroke="#141B28" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23 46 32 37l9 9" fill="none" stroke="#141B28" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+</svg>
